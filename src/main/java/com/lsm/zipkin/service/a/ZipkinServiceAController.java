@@ -24,13 +24,13 @@ public class ZipkinServiceAController {
 
     @RequestMapping("/a")
     public String callHome() {
-        LOG.info("calling trace zipkin-service-a ");
+        LOG.info("calling trace zipkin-service-b");
         return restTemplate.getForObject("http://localhost:8773/b", String.class);
     }
 
     @RequestMapping("/info")
     public String info() {
-        LOG.info("calling trace zipkin-service-a");
+        LOG.info("i'm zipkin-service-a");
         return "i'm zipkin-service-a";
 
     }
